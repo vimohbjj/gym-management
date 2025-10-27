@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useRef, useId } from 'react'
 import { toast } from 'react-toastify';
 import registro from './registro';
@@ -13,6 +13,7 @@ const login = () => {
   const navigate = useNavigate();
 
   let Login = () => {
+
     if (!nombreUsu.current.value || !password.current.value) {
       toast.warning("Por favor, complete todos los campos.");
       return;
@@ -48,7 +49,7 @@ const login = () => {
   return (
     <section id="login">
       <h2>Login</h2>
-      <form>
+      <form className='flex-col'>
         <p>
           <label htmlFor={idNomUsu}>Nombre usuario: </label>
           <input type="text" name="nombre" id={idNomUsu}  ref={nombreUsu} />

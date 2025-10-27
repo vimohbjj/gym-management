@@ -75,7 +75,7 @@ const dashboard = () => {
     }, [sesiones]);
 
     return (
-        <div>
+        <div className='bg-color-dark'>
             <header>
                 <h2>JUST DO IT...</h2>
                 <input type="button" value="Logout" onClick={Logout} />
